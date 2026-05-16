@@ -1,13 +1,167 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #334155
+  );
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Main Page */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main Card */
+.card {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Input Group */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputGroup label {
+  color: #dbeafe;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Input */
+.inputGroup input {
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.inputGroup input::placeholder {
+  color: #cbd5e1;
+}
+
+.inputGroup input:focus {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.01);
+}
+
+/* Button */
+.inputGroup button {
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.inputGroup button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.4);
+}
+
+/* Fixed Display Area */
+.displayArea {
+  margin-top: 25px;
+  min-height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loading & Error */
+.loading,
+.error {
+  color: white;
+  text-align: center;
+}
+
+.error {
+  color: #f87171;
+}
+
+/* Weather Card */
+.weatherCard {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Weather Icon */
+.weatherVisual img {
+  width: 120px;
+  height: 120px;
+}
+
+/* City Name */
+.weatherCard h2 {
+  color: white;
+  margin-bottom: 18px;
+  font-size: 30px;
+}
+
+/* Weather Text */
+.weatherCard p {
+  color: #e2e8f0;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+.label {
+  color: white;
+  font-weight: bold;
+}
+
+/* Smooth Fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
