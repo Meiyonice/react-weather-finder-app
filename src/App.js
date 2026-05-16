@@ -68,7 +68,6 @@ function App() {
           </button>
         </div>
 
-        {/* Fixed Display Area */}
         <div className="displayArea">
           {loading && (
             <h2 className="loading">
