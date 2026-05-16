@@ -32,7 +32,7 @@ function App() {
       const data = await response.json();
 
       await new Promise((resolve) =>
-        setTimeout(resolve, 300)
+        setTimeout(resolve, 500)
       );
 
       setWeather(data);
